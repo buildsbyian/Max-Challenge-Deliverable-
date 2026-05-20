@@ -110,29 +110,29 @@ p{margin:0}
 .hypo strong{color:var(--ink);display:block;margin-bottom:4px;font-size:14px}
 .hypo p{font-size:14px;color:var(--ink-2)}
 
-/* Meta ad cards */
-.ad-grid{display:grid;gap:16px;margin-top:24px}
-@media(min-width:900px){.ad-grid{grid-template-columns:repeat(3,1fr)}}
-.ad-card{
+/* Meta angle cards */
+.angle-grid{display:grid;gap:16px;margin-top:24px}
+@media(min-width:900px){.angle-grid{grid-template-columns:repeat(3,1fr)}}
+.angle-card{
   display:block;border:1px solid var(--line);border-radius:var(--radius-lg);
   background:var(--surface);overflow:hidden;box-shadow:0 4px 20px rgba(26,22,20,.04);
   transition:transform .25s var(--ease),box-shadow .25s;
 }
-.section--surface .ad-card{background:var(--bg)}
-.ad-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,22,20,.1)}
-.ad-head{padding:20px 20px 16px;border-bottom:1px solid var(--line-soft)}
-.ad-badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.section--surface .angle-card{background:var(--bg)}
+.angle-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,22,20,.1)}
+.angle-head{padding:20px 20px 16px;border-bottom:1px solid var(--line-soft)}
+.angle-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .badge{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;border:1px solid var(--line)}
 .badge--edu{background:#EEF4F8;color:#2A4A5E;border-color:rgba(42,74,94,.15)}
 .badge--proof{background:var(--accent-soft);color:var(--accent);border-color:rgba(45,95,74,.2)}
 .badge--humor{background:#FDF0EC;color:#8B3A28;border-color:rgba(139,58,40,.15)}
-.ad-card h3{font-size:17px;margin-bottom:4px}
-.ad-card .ad-type{font-size:12px;color:var(--mute);font-weight:500}
-.ad-body{padding:16px 20px 20px}
-.ad-field + .ad-field{margin-top:14px}
-.ad-field-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:0 0 4px}
-.ad-field-copy{margin:0;font-size:13px;color:var(--ink-2);line-height:1.5}
-.ad-field-copy strong{color:var(--ink);font-weight:600}
+.angle-card h3{font-size:17px;margin-bottom:4px}
+.angle-card .angle-type{font-size:12px;color:var(--mute);font-weight:500}
+.angle-body{padding:16px 20px 20px}
+.angle-field + .angle-field{margin-top:14px}
+.angle-field-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:0 0 4px}
+.angle-field-copy{margin:0;font-size:13px;color:var(--ink-2);line-height:1.5}
+.angle-field-copy strong{color:var(--ink);font-weight:600}
 .hook-pills{display:flex;flex-direction:column;gap:6px;margin-top:4px}
 .hook-pill{font-size:12px;padding:8px 10px;background:var(--surface-2);border-radius:8px;border:1px solid var(--line-soft);color:var(--ink-2);line-height:1.4;font-style:italic}
 .section--surface .hook-pill{background:var(--surface)}
@@ -197,7 +197,7 @@ td{color:var(--ink-2)}td strong{color:var(--ink)}
 .reveal-ready .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal,.reveal-ready .reveal,.reveal-ready .reveal.in{opacity:1;transform:none;transition:none}}
 @media(max-width:720px){.nav-links{display:none}.section{padding:52px 0}.hero{padding:64px 0 56px}.hero-cards{grid-template-columns:1fr}}
-@media print{.nav{display:none}.section{padding:40px 0}.reveal,.reveal-ready .reveal,.reveal-ready .reveal.in{opacity:1;transform:none}.ad-card,.mech-card{break-inside:avoid}}
+@media print{.nav{display:none}.section{padding:40px 0}.reveal,.reveal-ready .reveal,.reveal-ready .reveal.in{opacity:1;transform:none}.angle-card,.mech-card{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -207,7 +207,7 @@ td{color:var(--ink-2)}td strong{color:var(--ink)}
     <span class="nav-brand">Chief of Staff · Deliverables</span>
     <nav class="nav-links" aria-label="Sections">
       <a href="#c1">Volley</a>
-      <a href="#c1-ads">Meta ads</a>
+      <a href="#c1-meta">Meta ads</a>
       <a href="#c1-test">Testing</a>
       <a href="#c2">Snowball</a>
     </nav>
@@ -328,50 +328,50 @@ td{color:var(--ink-2)}td strong{color:var(--ink)}
 </section>
 
 <!-- Challenge 1: Meta Ads -->
-<section class="section section--surface" id="c1-ads">
+<section class="section section--surface" id="c1-meta">
   <div class="container">
     <span class="section-label">Challenge 1 · Deliverable 2</span>
     <h2>3 Meta ad angles</h2>
     <p class="lede">Volley needs creative range, not one lucky ad. Three angles stress-test different buyers and objections — educational trust, transformation proof for premium skeptics, and humor for cold reach — each with hooks, full scripts, and shoot direction for Meta.</p>
 
-    <div class="ad-grid">
+    <div class="angle-grid">
       <!-- Angle 1 -->
-      <div class="ad-card">
-        <div class="ad-head">
-          <div class="ad-badges">
+      <div class="angle-card">
+        <div class="angle-head">
+          <div class="angle-tags">
             <span class="badge badge--edu">Educational</span>
             <span class="badge">Trust-first</span>
           </div>
           <h3>Angle 01</h3>
-          <p class="ad-type">Ali Abdaal energy · saves &amp; shares</p>
+          <p class="angle-type">Ali Abdaal energy · saves &amp; shares</p>
         </div>
-        <div class="ad-body">
-          <div class="ad-field">
-            <p class="ad-field-label">Audience</p>
-            <p class="ad-field-copy">Self-improvers and professionals quietly curious about leveling up. Already consume creator content.</p>
+        <div class="angle-body">
+          <div class="angle-field">
+            <p class="angle-field-label">Audience</p>
+            <p class="angle-field-copy">Self-improvers and professionals quietly curious about leveling up. Already consume creator content.</p>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Hook type</p>
-            <p class="ad-field-copy">Curiosity gap — "you're studying the wrong thing"</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Hook type</p>
+            <p class="angle-field-copy">Curiosity gap — "you're studying the wrong thing"</p>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Core promise</p>
-            <p class="ad-field-copy"><strong>"I'll make you smarter about how language learning actually works, then show you the tool."</strong></p>
+          <div class="angle-field">
+            <p class="angle-field-label">Core promise</p>
+            <p class="angle-field-copy"><strong>"I'll make you smarter about how language learning actually works, then show you the tool."</strong></p>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Hook variations</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Hook variations</p>
             <div class="hook-pills">
               <span class="hook-pill">"Most people fail language learning because they study the wrong thing."</span>
               <span class="hook-pill">"One trick polyglots use that apps never teach you."</span>
               <span class="hook-pill">"Learn 20% of a language correctly and you understand 80% of conversations."</span>
             </div>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Copy script · 30 sec</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Copy script · 30 sec</p>
             <div class="script-block">"Quick language tip most apps miss. You don't learn a language by memorizing words. Your brain learns through repetition, emotional context, and speaking pressure. That's why people spend two years on apps and still freeze when someone talks to them. Volley combines AI conversation practice, personalized audio lessons, and a real tutor who reviews your progress weekly. Your plan changes based on your weak spots. Try it if you actually want to speak the language, not collect streaks."</div>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Visual direction</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Visual direction</p>
             <div class="visual-block">
               <ul class="visual-list">
                 <li>9:16 vertical, 30–40 seconds</li>
@@ -385,42 +385,42 @@ td{color:var(--ink-2)}td strong{color:var(--ink)}
       </div>
 
       <!-- Angle 2 -->
-      <div class="ad-card">
-        <div class="ad-head">
-          <div class="ad-badges">
+      <div class="angle-card">
+        <div class="angle-head">
+          <div class="angle-tags">
             <span class="badge badge--proof">Social proof</span>
             <span class="badge">Transformation</span>
           </div>
           <h3>Angle 02</h3>
-          <p class="ad-type">Highest conviction for $99/mo</p>
+          <p class="angle-type">Highest conviction for $99/mo</p>
         </div>
-        <div class="ad-body">
-          <div class="ad-field">
-            <p class="ad-field-label">Audience</p>
-            <p class="ad-field-copy">Adults who tried Duolingo or Babbel and quit. Skeptical of every app, especially premium ones.</p>
+        <div class="angle-body">
+          <div class="angle-field">
+            <p class="angle-field-label">Audience</p>
+            <p class="angle-field-copy">Adults who tried Duolingo or Babbel and quit. Skeptical of every app, especially premium ones.</p>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Hook type</p>
-            <p class="ad-field-copy">Specific outcome — career or life transformation</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Hook type</p>
+            <p class="angle-field-copy">Specific outcome — career or life transformation</p>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Core promise</p>
-            <p class="ad-field-copy"><strong>"This actually worked for a normal person. Here's what changed."</strong></p>
+          <div class="angle-field">
+            <p class="angle-field-label">Core promise</p>
+            <p class="angle-field-copy"><strong>"This actually worked for a normal person. Here's what changed."</strong></p>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Hook variations</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Hook variations</p>
             <div class="hook-pills">
               <span class="hook-pill">"I closed my first international client last month. The crazy part? I learned Spanish in 4 months."</span>
               <span class="hook-pill">"I proposed to my girlfriend in her native language after 4 months on this app."</span>
               <span class="hook-pill">"The waiter gave us free dessert because I ordered in Italian. $99/month, worth every cent."</span>
             </div>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Copy script · 45 sec</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Copy script · 45 sec</p>
             <div class="script-block">"I run a small agency. Most prospects were US-based until last fall, when I started losing pitches to bilingual consultants. I'd tried Duolingo. Six months, nothing stuck. A friend recommended Volley. I was skeptical — $99 a month is real money. What's different is the structure. Ten minutes of AI conversation practice daily, audio lessons built for my weak spots, a tutor who reviews progress weekly. By month two I held basic calls. By month four I closed a $40k contract with a client in Mexico City. If you keep saying you'll learn a language someday, this is the closest thing I've found to a system that actually works for adults without time."</div>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Visual direction</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Visual direction</p>
             <div class="visual-block">
               <ul class="visual-list">
                 <li>9:16 vertical, 40–60 seconds</li>
@@ -434,42 +434,42 @@ td{color:var(--ink-2)}td strong{color:var(--ink)}
       </div>
 
       <!-- Angle 3 -->
-      <div class="ad-card">
-        <div class="ad-head">
-          <div class="ad-badges">
+      <div class="angle-card">
+        <div class="angle-head">
+          <div class="angle-tags">
             <span class="badge badge--humor">Humor / skit</span>
             <span class="badge">Reach play</span>
           </div>
           <h3>Angle 03</h3>
-          <p class="ad-type">Corporate Natalie · watch trial quality</p>
+          <p class="angle-type">Corporate Natalie · watch trial quality</p>
         </div>
-        <div class="ad-body">
-          <div class="ad-field">
-            <p class="ad-field-label">Audience</p>
-            <p class="ad-field-copy">Younger social users (22–35), broad cold. Not actively searching — jolted into "I should do this."</p>
+        <div class="angle-body">
+          <div class="angle-field">
+            <p class="angle-field-label">Audience</p>
+            <p class="angle-field-copy">Younger social users (22–35), broad cold. Not actively searching — jolted into "I should do this."</p>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Hook type</p>
-            <p class="ad-field-copy">POV / relatable workplace embarrassment</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Hook type</p>
+            <p class="angle-field-copy">POV / relatable workplace embarrassment</p>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Core promise</p>
-            <p class="ad-field-copy"><strong>"Knowing a language gives you social and professional power. Here's the punchline."</strong></p>
+          <div class="angle-field">
+            <p class="angle-field-label">Core promise</p>
+            <p class="angle-field-copy"><strong>"Knowing a language gives you social and professional power. Here's the punchline."</strong></p>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Hook variations</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Hook variations</p>
             <div class="hook-pills">
               <span class="hook-pill">"POV: you lose the client because nobody on the call speaks Spanish."</span>
               <span class="hook-pill">"When your coworkers think you don't understand their language…"</span>
               <span class="hook-pill">"I thought my boyfriend had an AI girlfriend. Turns out he was just studying Italian."</span>
             </div>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Copy script · 20 sec skit</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Copy script · 20 sec skit</p>
             <div class="script-block">[Zoom meeting] Client: "So… does anyone here speak Spanish?" [awkward silence] Sales manager: "…hola." [client visibly uncomfortable] Cut to narrator: "This is why professionals are quietly learning languages. With Volley, you practice real conversations daily using AI, while a tutor adjusts your plan every week. 10 minutes a day. Real speaking practice."</div>
           </div>
-          <div class="ad-field">
-            <p class="ad-field-label">Visual direction</p>
+          <div class="angle-field">
+            <p class="angle-field-label">Visual direction</p>
             <div class="visual-block">
               <ul class="visual-list">
                 <li>9:16 vertical, 15–25 seconds</li>
