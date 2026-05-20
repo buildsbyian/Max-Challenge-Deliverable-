@@ -1,0 +1,729 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chief of Staff Challenge — Deliverables</title>
+<meta name="description" content="Volley funnel rebuild, Meta ad strategy, and Snowball Head of Sales candidate search."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#F3EEE5;--bg-2:#ECE5D6;--surface:#FFFFFF;--surface-2:#FAF8F5;
+  --ink:#1A1614;--ink-2:#2A2522;--ink-3:#3F3833;--mute:#6B5F55;--mute-2:#9A8B7E;
+  --line:rgba(26,22,20,.12);--line-soft:rgba(26,22,20,.07);
+  --accent:#2D5F4A;--accent-soft:#E5EEE8;--coral:#D9482D;--coral-dark:#B33A22;
+  --linkedin:#0A66C2;--max:1080px;--ease:cubic-bezier(.16,1,.3,1);
+  --radius:14px;--radius-lg:20px;
+}
+*{box-sizing:border-box}html,body{margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink-2);background:var(--bg);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.6;overflow-x:hidden}
+::selection{background:var(--ink);color:var(--bg)}a{color:inherit}
+h1,h2,h3,h4{font-family:'Inter Tight','Inter',sans-serif;color:var(--ink);font-weight:700;letter-spacing:-.025em;line-height:1.15;margin:0}
+h1{font-size:clamp(36px,5vw,56px);font-weight:800;letter-spacing:-.04em;line-height:1.02}
+h2{font-size:clamp(26px,3.2vw,34px);margin-bottom:6px}
+h3{font-size:18px;font-weight:700}
+h4{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 10px}
+p{margin:0}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(243,238,229,.82);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid transparent;transition:border-color .25s,background .25s}
+.nav.scrolled{border-bottom-color:var(--line-soft);background:rgba(243,238,229,.95)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-brand{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:14px;letter-spacing:-.02em;color:var(--ink)}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap}
+.nav-links a{font-size:13px;font-weight:600;color:var(--ink-3);padding:8px 12px;border-radius:999px;transition:background .15s,color .15s}
+.nav-links a:hover{background:var(--surface);color:var(--ink)}
+
+/* Sections */
+.section{padding:72px 0;position:relative}
+.section--surface{background:var(--surface)}
+.section-foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-top:48px;padding-top:20px;border-top:1px solid var(--line-soft);font-size:12px;color:var(--mute-2);font-weight:500}
+.section-index{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:13px;color:var(--ink-3);background:var(--bg);padding:4px 10px;border-radius:999px;border:1px solid var(--line-soft)}
+.section--surface .section-index{background:var(--surface-2)}
+
+/* Hero */
+.hero{padding:88px 0 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--line-soft)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(26,22,20,.07) 1px,transparent 1.5px);background-size:22px 22px;mask-image:radial-gradient(ellipse 80% 70% at 50% 20%,#000 20%,transparent 75%);opacity:.7}
+.hero .container{position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:20px}
+.hero-tag::before{content:"";width:20px;height:1px;background:var(--ink-3);opacity:.5}
+.hero h1{max-width:14ch;margin-bottom:20px}
+.hero-sub{font-size:clamp(17px,2vw,20px);color:var(--mute);max-width:48ch;line-height:1.55;font-weight:500}
+.hero-cards{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.hero-card{padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 4px 16px rgba(26,22,20,.04);transition:transform .2s var(--ease),box-shadow .2s}
+.hero-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(26,22,20,.08)}
+.hero-card dt{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.hero-card dd{margin:0;font-size:14px;color:var(--ink-3);line-height:1.45}
+
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;padding:6px 14px;background:var(--accent-soft);border-radius:999px}
+.lede{font-size:17px;color:var(--mute);margin-top:10px;max-width:58ch;line-height:1.6;font-weight:500}
+
+/* Buttons */
+.btn-row{margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s var(--ease),box-shadow .2s,background .15s}
+.btn svg{width:18px;height:18px;flex-shrink:0;transition:transform .2s var(--ease)}
+.btn:hover svg{transform:translateX(3px)}
+.btn-lp{background:var(--coral);color:#fff;box-shadow:0 4px 14px rgba(217,72,45,.28)}
+.btn-lp:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(217,72,45,.38);color:#fff;background:var(--coral-dark)}
+.btn-linkedin{background:var(--linkedin);color:#fff;padding:10px 18px;font-size:13px;border-radius:8px}
+.btn-linkedin:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(10,102,194,.3);color:#fff}
+.btn-linkedin svg{width:16px;height:16px}
+
+/* Grids */
+.split{display:grid;gap:12px;margin-top:20px}
+@media(min-width:560px){.split{grid-template-columns:1fr 1fr}}
+.block{padding:18px 20px;background:var(--surface-2);border:1px solid var(--line-soft);border-radius:var(--radius);transition:box-shadow .2s,transform .2s var(--ease)}
+.section--surface .block{background:var(--bg)}
+.block:hover{box-shadow:0 8px 24px rgba(26,22,20,.06);transform:translateY(-1px)}
+.block-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.block.problem .block-label{color:var(--coral)}
+.block.solution .block-label{color:var(--accent)}
+.block p{font-size:14px;color:var(--ink-2);line-height:1.55}
+
+/* Conversion mechanism — 8-step grid */
+.mech-grid{display:grid;gap:12px;margin-top:24px}
+@media(min-width:520px){.mech-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.mech-grid{grid-template-columns:repeat(4,1fr)}}
+.mech-card{
+  padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  position:relative;overflow:hidden;transition:transform .2s var(--ease),box-shadow .2s,border-color .2s;
+}
+.section--surface .mech-card{background:var(--bg)}
+.mech-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(26,22,20,.08);border-color:rgba(45,95,74,.35)}
+.mech-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);opacity:0;transition:opacity .2s}
+.mech-card:hover::before{opacity:1}
+.mech-step{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:11px;letter-spacing:.1em;color:var(--mute);margin-bottom:8px}
+.mech-card h3{font-size:15px;margin-bottom:6px;line-height:1.25}
+.mech-card p{font-size:13px;color:var(--ink-2);line-height:1.5}
+
+.callout{margin-top:24px;padding:18px 20px;background:var(--accent-soft);border-left:3px solid var(--accent);font-size:14px;color:var(--ink-2);line-height:1.55;border-radius:0 var(--radius) var(--radius) 0}
+.callout strong{color:var(--ink)}
+
+.hypo-grid{display:grid;gap:14px;margin-top:18px}
+@media(min-width:640px){.hypo-grid{grid-template-columns:1fr 1fr}}
+.hypo{padding:20px 22px;border:1px solid var(--line);background:var(--surface);border-radius:var(--radius);box-shadow:0 2px 12px rgba(26,22,20,.03);transition:box-shadow .2s}
+.section--surface .hypo{background:var(--bg)}
+.hypo:hover{box-shadow:0 8px 24px rgba(26,22,20,.07)}
+.hypo strong{color:var(--ink);display:block;margin-bottom:4px;font-size:14px}
+.hypo p{font-size:14px;color:var(--ink-2)}
+
+/* Meta ad cards */
+.ad-grid{display:grid;gap:16px;margin-top:24px}
+@media(min-width:900px){.ad-grid{grid-template-columns:repeat(3,1fr)}}
+.ad-card{
+  display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius-lg);
+  background:var(--surface);overflow:hidden;box-shadow:0 4px 20px rgba(26,22,20,.04);
+  transition:transform .25s var(--ease),box-shadow .25s;
+}
+.section--surface .ad-card{background:var(--bg)}
+.ad-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,22,20,.1)}
+.ad-head{padding:20px 20px 16px;border-bottom:1px solid var(--line-soft)}
+.ad-badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.badge{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;border:1px solid var(--line)}
+.badge--edu{background:#EEF4F8;color:#2A4A5E;border-color:rgba(42,74,94,.15)}
+.badge--proof{background:var(--accent-soft);color:var(--accent);border-color:rgba(45,95,74,.2)}
+.badge--humor{background:#FDF0EC;color:#8B3A28;border-color:rgba(139,58,40,.15)}
+.ad-card h3{font-size:17px;margin-bottom:4px}
+.ad-card .ad-type{font-size:12px;color:var(--mute);font-weight:500}
+.ad-body{padding:16px 20px 20px;display:flex;flex-direction:column;gap:14px;flex:1}
+.ad-field dt{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.ad-field dd{margin:0;font-size:13px;color:var(--ink-2);line-height:1.5}
+.ad-field dd strong{color:var(--ink);font-weight:600}
+.hook-pills{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.hook-pill{font-size:12px;padding:8px 10px;background:var(--surface-2);border-radius:8px;border:1px solid var(--line-soft);color:var(--ink-2);line-height:1.4;font-style:italic}
+.section--surface .hook-pill{background:var(--surface)}
+.script-block{
+  padding:14px 16px;background:var(--surface-2);border:1px solid var(--line-soft);
+  border-left:3px solid var(--accent);border-radius:0 8px 8px 0;
+  font-size:12.5px;line-height:1.65;color:var(--ink-2);font-style:italic;
+}
+.section--surface .script-block{background:var(--surface)}
+.visual-block{padding:12px 14px;background:var(--bg-2);border-radius:8px;font-size:12px;color:var(--ink-2);line-height:1.55}
+.visual-block ul{margin:6px 0 0;padding-left:1.1em}
+.visual-block li{margin:3px 0}
+
+/* Tables */
+.table-wrap{margin-top:18px;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 4px 20px rgba(26,22,20,.04)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);background:var(--surface-2)}
+.section--surface th{background:var(--bg-2)}
+tr:last-child td{border-bottom:0}
+td{color:var(--ink-2)}td strong{color:var(--ink)}
+.metrics{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.metric{font-size:13px;font-weight:600;padding:8px 14px;background:var(--surface);border:1px solid var(--line);border-radius:999px;color:var(--ink-3);transition:transform .15s,box-shadow .15s}
+.metric:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(26,22,20,.06)}
+.section--surface .metric{background:var(--bg)}
+
+/* Challenge 2 */
+.essay{
+  margin-top:20px;padding:24px 26px;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-lg);font-size:15px;color:var(--ink-2);line-height:1.65;
+  box-shadow:0 4px 20px rgba(26,22,20,.04);
+}
+.section--surface .essay{background:var(--bg)}
+.essay p+p{margin-top:14px}
+.essay strong{color:var(--ink)}
+.touch-seq{margin-top:20px;display:grid;gap:10px}
+@media(min-width:640px){.touch-seq{grid-template-columns:repeat(3,1fr)}}
+.touch-step{padding:16px 18px;background:var(--surface-2);border:1px solid var(--line-soft);border-radius:var(--radius)}
+.section--surface .touch-step{background:var(--surface)}
+.touch-step .n{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:12px;color:var(--accent);margin-bottom:6px}
+.touch-step strong{display:block;font-size:14px;color:var(--ink);margin-bottom:4px}
+.touch-step p{font-size:13px;color:var(--ink-2);line-height:1.5}
+
+.pick{margin-top:18px;padding:24px;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);box-shadow:0 4px 20px rgba(26,22,20,.05);transition:transform .2s var(--ease),box-shadow .2s}
+.pick:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(26,22,20,.09)}
+.pick-head{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:10px}
+.pick h3{font-size:18px}
+.pick .role{font-size:13px;color:var(--mute);margin-top:2px}
+.pick .why{font-size:14px;color:var(--ink-2);line-height:1.55}
+.bench{margin-top:32px}
+.bench h3{font-size:16px;margin-bottom:16px}
+.bench-grid{display:grid;gap:12px}
+@media(min-width:520px){.bench-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:800px){.bench-grid{grid-template-columns:repeat(3,1fr)}}
+.bench-card{
+  padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:0 2px 12px rgba(26,22,20,.04);transition:transform .2s,box-shadow .2s;
+  display:flex;flex-direction:column;gap:10px;
+}
+.bench-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,22,20,.08)}
+.bench-card .name{font-weight:700;font-size:14px;color:var(--ink)}
+.bench-card .meta{font-size:12px;color:var(--mute);line-height:1.45;flex:1}
+
+.site-footer{padding:32px 0 48px;border-top:1px solid var(--line-soft);font-size:13px;color:var(--mute);background:var(--ink)}
+.site-footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.site-footer strong{color:var(--bg)}
+
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media(max-width:720px){.nav-links{display:none}.section{padding:52px 0}.hero{padding:64px 0 56px}.hero-cards{grid-template-columns:1fr}}
+@media print{.nav{display:none}.section{padding:40px 0}.reveal{opacity:1;transform:none}.ad-card,.mech-card{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <span class="nav-brand">Chief of Staff · Deliverables</span>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#c1">Volley</a>
+      <a href="#c1-ads">Meta ads</a>
+      <a href="#c1-test">Testing</a>
+      <a href="#c2">Snowball</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <p class="hero-tag reveal">Chief of Staff Challenge</p>
+    <h1 class="reveal">What I built and why</h1>
+    <p class="hero-sub reveal">Two problems from Max's inbox — rebuilt Volley's conversion funnel and hunted three A+ Head of Sales candidates for Snowball. Built to skim in under five minutes.</p>
+    <dl class="hero-cards reveal">
+      <div class="hero-card"><dt>Challenge 1</dt><dd>Volley LP variant, 3 Meta ad angles, 30-day testing plan</dd></div>
+      <div class="hero-card"><dt>Challenge 2</dt><dd>Snowball Head of Sales — 3 picks, 5 alternates</dd></div>
+      <div class="hero-card"><dt>Challenge 3</dt><dd>5-min Loom walkthrough — link in reply email</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- Challenge 1: Landing Page -->
+<section class="section" id="c1">
+  <div class="container">
+    <span class="section-label reveal">Challenge 1 · Deliverable 1</span>
+    <h2 class="reveal">Build a funnel for Volley</h2>
+    <p class="lede reveal">Abandoned standard SaaS layout for a Grand Slam Offer architecture — stack value, remove hesitation, make $99/mo feel obvious.</p>
+
+    <div class="btn-row reveal">
+      <a class="btn btn-lp" href="https://volley-lp.vercel.app/" target="_blank" rel="noopener">
+        View landing page variant
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <h4 style="margin-top:36px" class="reveal">Conversion mechanism · 8-step blueprint</h4>
+    <p class="lede reveal" style="margin-top:8px;font-size:15px">Each block maps to a section on the LP variant — sequenced as an offer, not a feature tour.</p>
+
+    <div class="mech-grid reveal">
+      <article class="mech-card">
+        <div class="mech-step">01</div>
+        <h3>Grand Slam Hook</h3>
+        <p>Benefit-driven headline — first impression is outcome ("conversational in 90 days"), not feature list.</p>
+      </article>
+      <article class="mech-card">
+        <div class="mech-step">02</div>
+        <h3>Tutor Proof</h3>
+        <p>Human coach is the hero; AI executes the plan. Disarms "AI scam" skepticism before price enters.</p>
+      </article>
+      <article class="mech-card">
+        <div class="mech-step">03</div>
+        <h3>Testimonials</h3>
+        <p>Video + quote proof above the fold — real faces and specific outcomes before UI screenshots.</p>
+      </article>
+      <article class="mech-card">
+        <div class="mech-step">04</div>
+        <h3>90-Day Guarantee</h3>
+        <p>Risk reversal on a premium price — complete the plan, still can't converse? Another 90 days free.</p>
+      </article>
+      <article class="mech-card">
+        <div class="mech-step">05</div>
+        <h3>Value Stacking</h3>
+        <p>Tutor + software + practice priced separately; total anchor ($426/mo) makes $99 feel like a steal.</p>
+      </article>
+      <article class="mech-card">
+        <div class="mech-step">06</div>
+        <h3>Scientific Method</h3>
+        <p>Listen → Speak → Remember pillars with clear "replaces X app" framing — mechanism, not magic.</p>
+      </article>
+      <article class="mech-card">
+        <div class="mech-step">07</div>
+        <h3>Competition Moat</h3>
+        <p>Visual comparison vs. Duolingo, Speak, Babbel — Volley wins on human review + adaptive speaking.</p>
+      </article>
+      <article class="mech-card">
+        <div class="mech-step">08</div>
+        <h3>Objection FAQ</h3>
+        <p>Time, languages, beginner fit, guarantee mechanics, cancel policy — edge cases cleared pre-checkout.</p>
+      </article>
+    </div>
+
+    <h4 style="margin-top:36px" class="reveal">What changed &amp; why</h4>
+    <div class="split reveal">
+      <div class="block problem">
+        <div class="block-label">Trust deficit</div>
+        <p>Generic corporate graphics and "AI-first" messaging read like a cash grab — credibility never forms.</p>
+      </div>
+      <div class="block solution">
+        <div class="block-label">Fix</div>
+        <p>Human-led narrative + video proof above the fold. AI positioned as execution tool only.</p>
+      </div>
+      <div class="block problem">
+        <div class="block-label">Weak offer</div>
+        <p>High perceived risk at $99/mo: thin differentiation, weak social proof, no value anchor.</p>
+      </div>
+      <div class="block solution">
+        <div class="block-label">Fix</div>
+        <p>Grand Slam stack, guarantee, and comparison table vs. traditional apps.</p>
+      </div>
+      <div class="block problem">
+        <div class="block-label">Acquisition friction</div>
+        <p>No clear trial path; clunky sign-up kills intent before the card form.</p>
+      </div>
+      <div class="block solution">
+        <div class="block-label">Fix</div>
+        <p>Single CTA thread: 2-min placement test → first week built today. FAQ handles leftovers.</p>
+      </div>
+    </div>
+
+    <h4 style="margin-top:32px" class="reveal">Hypotheses under test</h4>
+    <div class="hypo-grid reveal">
+      <div class="hypo">
+        <strong>H1 · AI skepticism</strong>
+        <p>Shifting messaging from "AI-driven app" to "human-curated, AI-powered coaching" plus video proof will increase baseline trust and lift conversion.</p>
+      </div>
+      <div class="hypo">
+        <strong>H2 · Offer strength</strong>
+        <p>Value stacking + risk-reversal guarantee lowers perceived barrier, driving higher trial velocity for a premium $99/mo product.</p>
+      </div>
+    </div>
+
+    <div class="section-foot reveal">
+      <span>Challenge 1 · Landing page variant</span>
+      <span class="section-index">01</span>
+    </div>
+  </div>
+</section>
+
+<!-- Challenge 1: Meta Ads -->
+<section class="section section--surface" id="c1-ads">
+  <div class="container">
+    <span class="section-label reveal">Challenge 1 · Deliverable 2</span>
+    <h2 class="reveal">3 Meta ad angles</h2>
+    <p class="lede reveal">Volley needs creative range, not one lucky ad. Three angles stress-test different buyers and objections — educational trust, transformation proof for premium skeptics, and humor for cold reach — each with hooks, full scripts, and shoot direction for Meta.</p>
+
+    <div class="ad-grid reveal">
+      <!-- Angle 1 -->
+      <article class="ad-card">
+        <div class="ad-head">
+          <div class="ad-badges">
+            <span class="badge badge--edu">Educational</span>
+            <span class="badge">Trust-first</span>
+          </div>
+          <h3>Angle 01</h3>
+          <p class="ad-type">Ali Abdaal energy · saves &amp; shares</p>
+        </div>
+        <div class="ad-body">
+          <dl class="ad-field">
+            <dt>Audience</dt>
+            <dd>Self-improvers and professionals quietly curious about leveling up. Already consume creator content.</dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Hook type</dt>
+            <dd>Curiosity gap — "you're studying the wrong thing"</dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Core promise</dt>
+            <dd><strong>"I'll make you smarter about how language learning actually works, then show you the tool."</strong></dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Hook variations</dt>
+            <dd>
+              <div class="hook-pills">
+                <span class="hook-pill">"Most people fail language learning because they study the wrong thing."</span>
+                <span class="hook-pill">"One trick polyglots use that apps never teach you."</span>
+                <span class="hook-pill">"Learn 20% of a language correctly and you understand 80% of conversations."</span>
+              </div>
+            </dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Copy script · 30 sec</dt>
+            <dd>
+              <div class="script-block">"Quick language tip most apps miss. You don't learn a language by memorizing words. Your brain learns through repetition, emotional context, and speaking pressure. That's why people spend two years on apps and still freeze when someone talks to them. Volley combines AI conversation practice, personalized audio lessons, and a real tutor who reviews your progress weekly. Your plan changes based on your weak spots. Try it if you actually want to speak the language, not collect streaks."</div>
+            </dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Visual direction</dt>
+            <dd>
+              <div class="visual-block">
+                <ul>
+                  <li>9:16 vertical, 30–40 seconds</li>
+                  <li>Selfie-cam educator, single take, clear room audio</li>
+                  <li>B-roll inserts: app UI, conversation screen, tutor feedback</li>
+                  <li>Style reference: Ali Abdaal short-form — soft teaching tone, not salesy</li>
+                </ul>
+              </div>
+            </dd>
+          </dl>
+        </div>
+      </article>
+
+      <!-- Angle 2 -->
+      <article class="ad-card">
+        <div class="ad-head">
+          <div class="ad-badges">
+            <span class="badge badge--proof">Social proof</span>
+            <span class="badge">Transformation</span>
+          </div>
+          <h3>Angle 02</h3>
+          <p class="ad-type">Highest conviction for $99/mo</p>
+        </div>
+        <div class="ad-body">
+          <dl class="ad-field">
+            <dt>Audience</dt>
+            <dd>Adults who tried Duolingo or Babbel and quit. Skeptical of every app, especially premium ones.</dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Hook type</dt>
+            <dd>Specific outcome — career or life transformation</dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Core promise</dt>
+            <dd><strong>"This actually worked for a normal person. Here's what changed."</strong></dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Hook variations</dt>
+            <dd>
+              <div class="hook-pills">
+                <span class="hook-pill">"I closed my first international client last month. The crazy part? I learned Spanish in 4 months."</span>
+                <span class="hook-pill">"I proposed to my girlfriend in her native language after 4 months on this app."</span>
+                <span class="hook-pill">"The waiter gave us free dessert because I ordered in Italian. $99/month, worth every cent."</span>
+              </div>
+            </dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Copy script · 45 sec</dt>
+            <dd>
+              <div class="script-block">"I run a small agency. Most prospects were US-based until last fall, when I started losing pitches to bilingual consultants. I'd tried Duolingo. Six months, nothing stuck. A friend recommended Volley. I was skeptical — $99 a month is real money. What's different is the structure. Ten minutes of AI conversation practice daily, audio lessons built for my weak spots, a tutor who reviews progress weekly. By month two I held basic calls. By month four I closed a $40k contract with a client in Mexico City. If you keep saying you'll learn a language someday, this is the closest thing I've found to a system that actually works for adults without time."</div>
+            </dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Visual direction</dt>
+            <dd>
+              <div class="visual-block">
+                <ul>
+                  <li>9:16 vertical, 40–60 seconds</li>
+                  <li>Real person, imperfect lighting — home office or kitchen</li>
+                  <li>Proof artifacts on screen: WhatsApp messages, calendar streak, tutor notes</li>
+                  <li>Style reference: founder testimonials — intentionally unpolished, not ad-agency</li>
+                </ul>
+              </div>
+            </dd>
+          </dl>
+        </div>
+      </article>
+
+      <!-- Angle 3 -->
+      <article class="ad-card">
+        <div class="ad-head">
+          <div class="ad-badges">
+            <span class="badge badge--humor">Humor / skit</span>
+            <span class="badge">Reach play</span>
+          </div>
+          <h3>Angle 03</h3>
+          <p class="ad-type">Corporate Natalie · watch trial quality</p>
+        </div>
+        <div class="ad-body">
+          <dl class="ad-field">
+            <dt>Audience</dt>
+            <dd>Younger social users (22–35), broad cold. Not actively searching — jolted into "I should do this."</dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Hook type</dt>
+            <dd>POV / relatable workplace embarrassment</dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Core promise</dt>
+            <dd><strong>"Knowing a language gives you social and professional power. Here's the punchline."</strong></dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Hook variations</dt>
+            <dd>
+              <div class="hook-pills">
+                <span class="hook-pill">"POV: you lose the client because nobody on the call speaks Spanish."</span>
+                <span class="hook-pill">"When your coworkers think you don't understand their language…"</span>
+                <span class="hook-pill">"I thought my boyfriend had an AI girlfriend. Turns out he was just studying Italian."</span>
+              </div>
+            </dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Copy script · 20 sec skit</dt>
+            <dd>
+              <div class="script-block">[Zoom meeting] Client: "So… does anyone here speak Spanish?" [awkward silence] Sales manager: "…hola." [client visibly uncomfortable] Cut to narrator: "This is why professionals are quietly learning languages. With Volley, you practice real conversations daily using AI, while a tutor adjusts your plan every week. 10 minutes a day. Real speaking practice."</div>
+            </dd>
+          </dl>
+          <dl class="ad-field">
+            <dt>Visual direction</dt>
+            <dd>
+              <div class="visual-block">
+                <ul>
+                  <li>9:16 vertical, 15–25 seconds</li>
+                  <li>Fast skit, punchline-first, captions burned in</li>
+                  <li>CTA card appears immediately after the emotional peak</li>
+                  <li>Style reference: Corporate Natalie, Brian Jordan Alvarez</li>
+                </ul>
+              </div>
+            </dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-foot reveal">
+      <span>Challenge 1 · Meta creative</span>
+      <span class="section-index">02</span>
+    </div>
+  </div>
+</section>
+
+<!-- Challenge 1: Testing -->
+<section class="section" id="c1-test">
+  <div class="container">
+    <span class="section-label reveal">Challenge 1 · Deliverable 3</span>
+    <h2 class="reveal">Testing plan · 30 days</h2>
+    <p class="lede reveal">1 Advantage+ campaign · $75/day · optimize for trial start · LP held constant in Phase 1 so creative is the isolated variable.</p>
+
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>Phase</th><th>Days</th><th>Goal</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Signal hunt</strong></td><td>1–7</td><td>Find 2 creatives Meta wants to ride</td><td>Launch 9 ads, kill losers daily</td></tr>
+          <tr><td><strong>Iterate winners</strong></td><td>8–17</td><td>Compound the winning hook</td><td>3–5 variations, new creators, same style</td></tr>
+          <tr><td><strong>LP test + scale</strong></td><td>18–30</td><td>Lift CVR, scale spend</td><td>A/B new LP vs control · +20% budget every 3 days on stable CPT</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 style="margin-top:28px" class="reveal">Initial benchmarks ($99/mo)</h4>
+    <div class="metrics reveal">
+      <span class="metric">Hook rate 25%+</span>
+      <span class="metric">CTR 1.2%+</span>
+      <span class="metric">LP CVR 6–10%</span>
+      <span class="metric">CPT &lt;$40</span>
+      <span class="metric">LTV:CAC 3:1 floor</span>
+    </div>
+
+    <h4 style="margin-top:28px" class="reveal">Scoreboard (read top-down)</h4>
+    <p class="reveal" style="margin-top:8px;font-size:14px;color:var(--ink-2)">CAC / payback → trial→paid % → CPT → LP CVR → CTR → hook rate → hold rate. <strong style="color:var(--ink)">Saves, shares, and comments are diagnostic only — they never decide spend.</strong></p>
+
+    <h4 style="margin-top:28px" class="reveal">Kill rules</h4>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>Level</th><th>Condition</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Creative</td><td>$30 spent + hook rate &lt;18%</td><td>Kill</td></tr>
+          <tr><td>Creative</td><td>$50 spent + CTR &lt;0.7%</td><td>Kill</td></tr>
+          <tr><td>Creative</td><td>$75 spent + CPT &gt;$80</td><td>Kill</td></tr>
+          <tr><td>Creative</td><td>$100 spent + clicks, 0 trials</td><td>Pause · diagnose LP fit (don't kill ad)</td></tr>
+          <tr><td>Angle</td><td>$200 across 3 creatives, none hit CTR + CPT</td><td>Kill angle</td></tr>
+          <tr><td>Landing page</td><td>1,000 clicks + variant CVR &lt;50% of control</td><td>Kill variant</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-foot reveal">
+      <span>Challenge 1 · Measurement</span>
+      <span class="section-index">03</span>
+    </div>
+  </div>
+</section>
+
+<!-- Challenge 2 -->
+<section class="section section--surface" id="c2">
+  <div class="container">
+    <span class="section-label reveal">Challenge 2</span>
+    <h2 class="reveal">Head of Sales · Snowball Agency</h2>
+    <p class="lede reveal">Cold DMs won't land A-players. This search targeted operators with media-native sales DNA — not org-chart picks from traditional SaaS.</p>
+
+    <div class="essay reveal">
+      <p><strong>Why low-effort cold DMs fail for A-players:</strong> The best operators in creator/media sales are already employed, well-networked, and allergic to generic recruiter copy. A templated "exciting opportunity" DM gets ignored because it signals you didn't do the work — and A-players optimize for who respects their time.</p>
+      <p><strong>Why a 3 + 5 pipeline de-risks the hire:</strong> Top picks will be passive, slow to respond, or happily employed. Three primaries give optionality on culture fit and closing timeline; five alternates mean you never restart the search from zero when one drops — critical for a role that touches revenue from day one.</p>
+    </div>
+
+    <h4 style="margin-top:28px" class="reveal">Sourcing filters</h4>
+    <div class="touch-seq reveal">
+      <div class="touch-step">
+        <div class="n">Filter 01</div>
+        <strong>Ryan's orbit</strong>
+        <p>People already adjacent to Snowball's ecosystem — warm context, shared language, faster trust.</p>
+      </div>
+      <div class="touch-step">
+        <div class="n">Filter 02</div>
+        <strong>Problem-solvers</strong>
+        <p>Operators who already cracked the creator-to-brand marketplace dynamic Snowball is navigating.</p>
+      </div>
+      <div class="touch-step">
+        <div class="n">Filter 03</div>
+        <strong>Agency operators</strong>
+        <p>Media-native sales DNA from competing shops — not traditional SaaS AE profiles from org charts.</p>
+      </div>
+    </div>
+
+    <h4 style="margin-top:36px" class="reveal">Top 3 picks</h4>
+
+    <article class="pick reveal">
+      <div class="pick-head">
+        <div>
+          <h3>Brian Bishop</h3>
+          <p class="role">Business Development Lead · beehiiv</p>
+        </div>
+        <a class="btn btn-linkedin" href="https://www.linkedin.com/in/brian-bishop91/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          View on LinkedIn
+        </a>
+      </div>
+      <p class="why">Reporter and producer turned BizDev lead — fast career growth, enterprise experience, hustle at hyper-growth beehiiv. Exact media-to-sales crossover Snowball needs; rising star, not traditional SaaS pedigree.</p>
+    </article>
+
+    <article class="pick reveal">
+      <div class="pick-head">
+        <div>
+          <h3>Jacob Schonberger</h3>
+          <p class="role">Head of Operations, Ad Solutions · beehiiv</p>
+        </div>
+        <a class="btn btn-linkedin" href="https://www.linkedin.com/in/jakeschonberger/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          View on LinkedIn
+        </a>
+      </div>
+      <p class="why">Ex-founder of a creator-to-advertiser platform acquired by beehiiv. BizDev, sales, brand partnerships — already built and solved the marketplace dynamics Snowball is navigating. Founder-level instincts.</p>
+    </article>
+
+    <article class="pick reveal">
+      <div class="pick-head">
+        <div>
+          <h3>Jenna Castaldo</h3>
+          <p class="role">Senior Director of Sales · Workweek</p>
+        </div>
+        <a class="btn btn-linkedin" href="https://www.linkedin.com/in/jenna-castaldo-a43928107/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          View on LinkedIn
+        </a>
+      </div>
+      <p class="why">Deep sales and branding background — on the frontlines at Morning Brew when they faced the same scaling and monetization challenges Snowball faces now. Sells attention and media, not software seats.</p>
+    </article>
+
+    <div class="bench reveal">
+      <h3>The bench · 5 A+ alternates</h3>
+      <div class="bench-grid">
+        <div class="bench-card">
+          <span class="name">Chadd SJ Ciccarelli</span>
+          <span class="meta">Fractional Head of CEO Content · Blue Bear Head · 12 years Amazon — GTM, strategic partnerships</span>
+          <a class="btn btn-linkedin" href="https://www.linkedin.com/in/chaddc/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="bench-card">
+          <span class="name">Jeff Olson</span>
+          <span class="meta">Co-Founder · creatorREV · Ex Global Head of Creator Partnerships, Jellysmack · TV creative executive</span>
+          <a class="btn btn-linkedin" href="https://www.linkedin.com/in/ejeffolson/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="bench-card">
+          <span class="name">Shawn Kallet</span>
+          <span class="meta">Co-CEO · 203 Creates · Sales, YouTube, brand partnerships, agency founder — A+ player, hard to hire</span>
+          <a class="btn btn-linkedin" href="https://www.linkedin.com/in/shawnkallet/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="bench-card">
+          <span class="name">Dustin Marucci</span>
+          <span class="meta">Founder · dustinternet · TV, brand partnerships, content, creatives, sales, ads</span>
+          <a class="btn btn-linkedin" href="https://www.linkedin.com/in/dustin-marucci-0b6577b/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="bench-card">
+          <span class="name">Nime La Fauci</span>
+          <span class="meta">Director, Brand Partnerships · Origin · Industry veteran — accounts, media, creatives. YouTube-native closer.</span>
+          <a class="btn btn-linkedin" href="https://www.linkedin.com/in/nimelafauci/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-foot reveal">
+      <span>Challenge 2 · Hiring</span>
+      <span class="section-index">04</span>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <span><strong>Chief of Staff Challenge</strong> — Volley funnel · Meta strategy · Snowball shortlist</span>
+    <span>Skim time ~5 min</span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+</script>
+</body>
+</html>
