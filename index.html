@@ -114,7 +114,7 @@ p{margin:0}
 .ad-grid{display:grid;gap:16px;margin-top:24px}
 @media(min-width:900px){.ad-grid{grid-template-columns:repeat(3,1fr)}}
 .ad-card{
-  display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius-lg);
+  display:block;border:1px solid var(--line);border-radius:var(--radius-lg);
   background:var(--surface);overflow:hidden;box-shadow:0 4px 20px rgba(26,22,20,.04);
   transition:transform .25s var(--ease),box-shadow .25s;
 }
@@ -128,10 +128,11 @@ p{margin:0}
 .badge--humor{background:#FDF0EC;color:#8B3A28;border-color:rgba(139,58,40,.15)}
 .ad-card h3{font-size:17px;margin-bottom:4px}
 .ad-card .ad-type{font-size:12px;color:var(--mute);font-weight:500}
-.ad-body{padding:16px 20px 20px;display:flex;flex-direction:column;gap:14px;flex:1}
-.ad-field dt{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
-.ad-field dd{margin:0;font-size:13px;color:var(--ink-2);line-height:1.5}
-.ad-field dd strong{color:var(--ink);font-weight:600}
+.ad-body{padding:16px 20px 20px}
+.ad-field + .ad-field{margin-top:14px}
+.ad-field-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:0 0 4px}
+.ad-field-copy{margin:0;font-size:13px;color:var(--ink-2);line-height:1.5}
+.ad-field-copy strong{color:var(--ink);font-weight:600}
 .hook-pills{display:flex;flex-direction:column;gap:6px;margin-top:4px}
 .hook-pill{font-size:12px;padding:8px 10px;background:var(--surface-2);border-radius:8px;border:1px solid var(--line-soft);color:var(--ink-2);line-height:1.4;font-style:italic}
 .section--surface .hook-pill{background:var(--surface)}
@@ -142,8 +143,8 @@ p{margin:0}
 }
 .section--surface .script-block{background:var(--surface)}
 .visual-block{padding:12px 14px;background:var(--bg-2);border-radius:8px;font-size:12px;color:var(--ink-2);line-height:1.55}
-.visual-block ul{margin:6px 0 0;padding-left:1.1em}
-.visual-block li{margin:3px 0}
+.visual-list{margin:6px 0 0;padding-left:1.1em}
+.visual-list li{margin:3px 0}
 
 /* Tables */
 .table-wrap{margin-top:18px;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 4px 20px rgba(26,22,20,.04)}
@@ -329,13 +330,13 @@ td{color:var(--ink-2)}td strong{color:var(--ink)}
 <!-- Challenge 1: Meta Ads -->
 <section class="section section--surface" id="c1-ads">
   <div class="container">
-    <span class="section-label reveal">Challenge 1 · Deliverable 2</span>
-    <h2 class="reveal">3 Meta ad angles</h2>
-    <p class="lede reveal">Volley needs creative range, not one lucky ad. Three angles stress-test different buyers and objections — educational trust, transformation proof for premium skeptics, and humor for cold reach — each with hooks, full scripts, and shoot direction for Meta.</p>
+    <span class="section-label">Challenge 1 · Deliverable 2</span>
+    <h2>3 Meta ad angles</h2>
+    <p class="lede">Volley needs creative range, not one lucky ad. Three angles stress-test different buyers and objections — educational trust, transformation proof for premium skeptics, and humor for cold reach — each with hooks, full scripts, and shoot direction for Meta.</p>
 
     <div class="ad-grid">
       <!-- Angle 1 -->
-      <article class="ad-card reveal">
+      <div class="ad-card">
         <div class="ad-head">
           <div class="ad-badges">
             <span class="badge badge--edu">Educational</span>
@@ -345,52 +346,46 @@ td{color:var(--ink-2)}td strong{color:var(--ink)}
           <p class="ad-type">Ali Abdaal energy · saves &amp; shares</p>
         </div>
         <div class="ad-body">
-          <dl class="ad-field">
-            <dt>Audience</dt>
-            <dd>Self-improvers and professionals quietly curious about leveling up. Already consume creator content.</dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Hook type</dt>
-            <dd>Curiosity gap — "you're studying the wrong thing"</dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Core promise</dt>
-            <dd><strong>"I'll make you smarter about how language learning actually works, then show you the tool."</strong></dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Hook variations</dt>
-            <dd>
-              <div class="hook-pills">
-                <span class="hook-pill">"Most people fail language learning because they study the wrong thing."</span>
-                <span class="hook-pill">"One trick polyglots use that apps never teach you."</span>
-                <span class="hook-pill">"Learn 20% of a language correctly and you understand 80% of conversations."</span>
-              </div>
-            </dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Copy script · 30 sec</dt>
-            <dd>
-              <div class="script-block">"Quick language tip most apps miss. You don't learn a language by memorizing words. Your brain learns through repetition, emotional context, and speaking pressure. That's why people spend two years on apps and still freeze when someone talks to them. Volley combines AI conversation practice, personalized audio lessons, and a real tutor who reviews your progress weekly. Your plan changes based on your weak spots. Try it if you actually want to speak the language, not collect streaks."</div>
-            </dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Visual direction</dt>
-            <dd>
-              <div class="visual-block">
-                <ul>
-                  <li>9:16 vertical, 30–40 seconds</li>
-                  <li>Selfie-cam educator, single take, clear room audio</li>
-                  <li>B-roll inserts: app UI, conversation screen, tutor feedback</li>
-                  <li>Style reference: Ali Abdaal short-form — soft teaching tone, not salesy</li>
-                </ul>
-              </div>
-            </dd>
-          </dl>
+          <div class="ad-field">
+            <p class="ad-field-label">Audience</p>
+            <p class="ad-field-copy">Self-improvers and professionals quietly curious about leveling up. Already consume creator content.</p>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Hook type</p>
+            <p class="ad-field-copy">Curiosity gap — "you're studying the wrong thing"</p>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Core promise</p>
+            <p class="ad-field-copy"><strong>"I'll make you smarter about how language learning actually works, then show you the tool."</strong></p>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Hook variations</p>
+            <div class="hook-pills">
+              <span class="hook-pill">"Most people fail language learning because they study the wrong thing."</span>
+              <span class="hook-pill">"One trick polyglots use that apps never teach you."</span>
+              <span class="hook-pill">"Learn 20% of a language correctly and you understand 80% of conversations."</span>
+            </div>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Copy script · 30 sec</p>
+            <div class="script-block">"Quick language tip most apps miss. You don't learn a language by memorizing words. Your brain learns through repetition, emotional context, and speaking pressure. That's why people spend two years on apps and still freeze when someone talks to them. Volley combines AI conversation practice, personalized audio lessons, and a real tutor who reviews your progress weekly. Your plan changes based on your weak spots. Try it if you actually want to speak the language, not collect streaks."</div>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Visual direction</p>
+            <div class="visual-block">
+              <ul class="visual-list">
+                <li>9:16 vertical, 30–40 seconds</li>
+                <li>Selfie-cam educator, single take, clear room audio</li>
+                <li>B-roll inserts: app UI, conversation screen, tutor feedback</li>
+                <li>Style reference: Ali Abdaal short-form — soft teaching tone, not salesy</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </article>
+      </div>
 
       <!-- Angle 2 -->
-      <article class="ad-card reveal">
+      <div class="ad-card">
         <div class="ad-head">
           <div class="ad-badges">
             <span class="badge badge--proof">Social proof</span>
@@ -400,52 +395,46 @@ td{color:var(--ink-2)}td strong{color:var(--ink)}
           <p class="ad-type">Highest conviction for $99/mo</p>
         </div>
         <div class="ad-body">
-          <dl class="ad-field">
-            <dt>Audience</dt>
-            <dd>Adults who tried Duolingo or Babbel and quit. Skeptical of every app, especially premium ones.</dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Hook type</dt>
-            <dd>Specific outcome — career or life transformation</dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Core promise</dt>
-            <dd><strong>"This actually worked for a normal person. Here's what changed."</strong></dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Hook variations</dt>
-            <dd>
-              <div class="hook-pills">
-                <span class="hook-pill">"I closed my first international client last month. The crazy part? I learned Spanish in 4 months."</span>
-                <span class="hook-pill">"I proposed to my girlfriend in her native language after 4 months on this app."</span>
-                <span class="hook-pill">"The waiter gave us free dessert because I ordered in Italian. $99/month, worth every cent."</span>
-              </div>
-            </dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Copy script · 45 sec</dt>
-            <dd>
-              <div class="script-block">"I run a small agency. Most prospects were US-based until last fall, when I started losing pitches to bilingual consultants. I'd tried Duolingo. Six months, nothing stuck. A friend recommended Volley. I was skeptical — $99 a month is real money. What's different is the structure. Ten minutes of AI conversation practice daily, audio lessons built for my weak spots, a tutor who reviews progress weekly. By month two I held basic calls. By month four I closed a $40k contract with a client in Mexico City. If you keep saying you'll learn a language someday, this is the closest thing I've found to a system that actually works for adults without time."</div>
-            </dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Visual direction</dt>
-            <dd>
-              <div class="visual-block">
-                <ul>
-                  <li>9:16 vertical, 40–60 seconds</li>
-                  <li>Real person, imperfect lighting — home office or kitchen</li>
-                  <li>Proof artifacts on screen: WhatsApp messages, calendar streak, tutor notes</li>
-                  <li>Style reference: founder testimonials — intentionally unpolished, not ad-agency</li>
-                </ul>
-              </div>
-            </dd>
-          </dl>
+          <div class="ad-field">
+            <p class="ad-field-label">Audience</p>
+            <p class="ad-field-copy">Adults who tried Duolingo or Babbel and quit. Skeptical of every app, especially premium ones.</p>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Hook type</p>
+            <p class="ad-field-copy">Specific outcome — career or life transformation</p>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Core promise</p>
+            <p class="ad-field-copy"><strong>"This actually worked for a normal person. Here's what changed."</strong></p>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Hook variations</p>
+            <div class="hook-pills">
+              <span class="hook-pill">"I closed my first international client last month. The crazy part? I learned Spanish in 4 months."</span>
+              <span class="hook-pill">"I proposed to my girlfriend in her native language after 4 months on this app."</span>
+              <span class="hook-pill">"The waiter gave us free dessert because I ordered in Italian. $99/month, worth every cent."</span>
+            </div>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Copy script · 45 sec</p>
+            <div class="script-block">"I run a small agency. Most prospects were US-based until last fall, when I started losing pitches to bilingual consultants. I'd tried Duolingo. Six months, nothing stuck. A friend recommended Volley. I was skeptical — $99 a month is real money. What's different is the structure. Ten minutes of AI conversation practice daily, audio lessons built for my weak spots, a tutor who reviews progress weekly. By month two I held basic calls. By month four I closed a $40k contract with a client in Mexico City. If you keep saying you'll learn a language someday, this is the closest thing I've found to a system that actually works for adults without time."</div>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Visual direction</p>
+            <div class="visual-block">
+              <ul class="visual-list">
+                <li>9:16 vertical, 40–60 seconds</li>
+                <li>Real person, imperfect lighting — home office or kitchen</li>
+                <li>Proof artifacts on screen: WhatsApp messages, calendar streak, tutor notes</li>
+                <li>Style reference: founder testimonials — intentionally unpolished, not ad-agency</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </article>
+      </div>
 
       <!-- Angle 3 -->
-      <article class="ad-card reveal">
+      <div class="ad-card">
         <div class="ad-head">
           <div class="ad-badges">
             <span class="badge badge--humor">Humor / skit</span>
@@ -455,49 +444,43 @@ td{color:var(--ink-2)}td strong{color:var(--ink)}
           <p class="ad-type">Corporate Natalie · watch trial quality</p>
         </div>
         <div class="ad-body">
-          <dl class="ad-field">
-            <dt>Audience</dt>
-            <dd>Younger social users (22–35), broad cold. Not actively searching — jolted into "I should do this."</dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Hook type</dt>
-            <dd>POV / relatable workplace embarrassment</dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Core promise</dt>
-            <dd><strong>"Knowing a language gives you social and professional power. Here's the punchline."</strong></dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Hook variations</dt>
-            <dd>
-              <div class="hook-pills">
-                <span class="hook-pill">"POV: you lose the client because nobody on the call speaks Spanish."</span>
-                <span class="hook-pill">"When your coworkers think you don't understand their language…"</span>
-                <span class="hook-pill">"I thought my boyfriend had an AI girlfriend. Turns out he was just studying Italian."</span>
-              </div>
-            </dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Copy script · 20 sec skit</dt>
-            <dd>
-              <div class="script-block">[Zoom meeting] Client: "So… does anyone here speak Spanish?" [awkward silence] Sales manager: "…hola." [client visibly uncomfortable] Cut to narrator: "This is why professionals are quietly learning languages. With Volley, you practice real conversations daily using AI, while a tutor adjusts your plan every week. 10 minutes a day. Real speaking practice."</div>
-            </dd>
-          </dl>
-          <dl class="ad-field">
-            <dt>Visual direction</dt>
-            <dd>
-              <div class="visual-block">
-                <ul>
-                  <li>9:16 vertical, 15–25 seconds</li>
-                  <li>Fast skit, punchline-first, captions burned in</li>
-                  <li>CTA card appears immediately after the emotional peak</li>
-                  <li>Style reference: Corporate Natalie, Brian Jordan Alvarez</li>
-                </ul>
-              </div>
-            </dd>
-          </dl>
+          <div class="ad-field">
+            <p class="ad-field-label">Audience</p>
+            <p class="ad-field-copy">Younger social users (22–35), broad cold. Not actively searching — jolted into "I should do this."</p>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Hook type</p>
+            <p class="ad-field-copy">POV / relatable workplace embarrassment</p>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Core promise</p>
+            <p class="ad-field-copy"><strong>"Knowing a language gives you social and professional power. Here's the punchline."</strong></p>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Hook variations</p>
+            <div class="hook-pills">
+              <span class="hook-pill">"POV: you lose the client because nobody on the call speaks Spanish."</span>
+              <span class="hook-pill">"When your coworkers think you don't understand their language…"</span>
+              <span class="hook-pill">"I thought my boyfriend had an AI girlfriend. Turns out he was just studying Italian."</span>
+            </div>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Copy script · 20 sec skit</p>
+            <div class="script-block">[Zoom meeting] Client: "So… does anyone here speak Spanish?" [awkward silence] Sales manager: "…hola." [client visibly uncomfortable] Cut to narrator: "This is why professionals are quietly learning languages. With Volley, you practice real conversations daily using AI, while a tutor adjusts your plan every week. 10 minutes a day. Real speaking practice."</div>
+          </div>
+          <div class="ad-field">
+            <p class="ad-field-label">Visual direction</p>
+            <div class="visual-block">
+              <ul class="visual-list">
+                <li>9:16 vertical, 15–25 seconds</li>
+                <li>Fast skit, punchline-first, captions burned in</li>
+                <li>CTA card appears immediately after the emotional peak</li>
+                <li>Style reference: Corporate Natalie, Brian Jordan Alvarez</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
