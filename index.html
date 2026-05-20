@@ -191,11 +191,12 @@ td{color:var(--ink-2)}td strong{color:var(--ink)}
 .site-footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .site-footer strong{color:var(--bg)}
 
-.reveal{opacity:0;transform:translateY(12px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+.reveal{opacity:1;transform:none}
+.reveal-ready .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.reveal-ready .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal,.reveal-ready .reveal,.reveal-ready .reveal.in{opacity:1;transform:none;transition:none}}
 @media(max-width:720px){.nav-links{display:none}.section{padding:52px 0}.hero{padding:64px 0 56px}.hero-cards{grid-template-columns:1fr}}
-@media print{.nav{display:none}.section{padding:40px 0}.reveal{opacity:1;transform:none}.ad-card,.mech-card{break-inside:avoid}}
+@media print{.nav{display:none}.section{padding:40px 0}.reveal,.reveal-ready .reveal,.reveal-ready .reveal.in{opacity:1;transform:none}.ad-card,.mech-card{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -668,19 +669,22 @@ td{color:var(--ink-2)}td strong{color:var(--ink)}
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealEls = document.querySelectorAll('.reveal');
   const show = (el) => el.classList.add('in');
-  if (!reduce) {
+  const revealVisibleNow = () => {
+    revealEls.forEach(el => {
+      if (el.classList.contains('in')) return;
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92 && r.bottom > 0) show(el);
+    });
+  };
+
+  if (!reduce && revealEls.length && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('reveal-ready');
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
     }, { threshold: 0, rootMargin: '0px 0px -5% 0px' });
     revealEls.forEach(el => io.observe(el));
-    // Tall blocks (e.g. ad cards) can miss IO; show anything already on screen after layout
-    requestAnimationFrame(() => {
-      revealEls.forEach(el => {
-        if (el.classList.contains('in')) return;
-        const r = el.getBoundingClientRect();
-        if (r.top < window.innerHeight * 0.92 && r.bottom > 0) show(el);
-      });
-    });
+    requestAnimationFrame(revealVisibleNow);
+    window.addEventListener('load', revealVisibleNow, { once: true });
   } else {
     revealEls.forEach(show);
   }
